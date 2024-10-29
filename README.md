@@ -1,5 +1,3 @@
-[![KakaoBrain](https://img.shields.io/badge/kakao-brain-ffcd00.svg)](http://kakaobrain.com/)
-
 # CXR-CLIP
 This is an official Pytorch Implementation of **"CXR-CLIP: Toward Large Scale Chest X-ray Language-Image Pre-training"** [[arxiv]](https://arxiv.org/abs/2310.13292)
 
@@ -97,5 +95,5 @@ python evaluate_finetune.py data_test=vindr_cxr test.checkpoint=${FINETUNED_CKPT
 CXR-CLIP: Toward Large Scale Chest X-ray Language-Image Pre-training © 2023 is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1)
 
 ## Contact for Issues
-Kihyun You, [ukihyun@kakaobrain.com](ukihyun@kakaobrain.com)  
-Jawook Gu, [jawook.gu@kakaobrain.com](jawook.gu@kakaobrain.com)
+Kihyun You, [kyle.kihyun@soombit.ai](kyle.kihyun@soombit.ai)  
+Jawook Gu, [dean.jawook@soombit.ai](dean.jawook@soombit.ai)
