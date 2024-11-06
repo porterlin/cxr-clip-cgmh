@@ -95,5 +95,5 @@ python evaluate_finetune.py data_test=vindr_cxr test.checkpoint=${FINETUNED_CKPT
 CXR-CLIP: Toward Large Scale Chest X-ray Language-Image Pre-training © 2023 is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1)
 
 ## Contact for Issues
-Kihyun You, [kyle.kihyun@soombit.ai](kyle.kihyun@soombit.ai)  
-Jawook Gu, [dean.jawook@soombit.ai](dean.jawook@soombit.ai)
+Kihyun You, [kihyun.you@soombit.ai](kihyun.you@soombit.ai)  
+Jawook Gu, [jawook.gu@soombit.ai](jawook.gu@soombit.ai)
