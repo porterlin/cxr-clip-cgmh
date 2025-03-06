@@ -1,0 +1,268 @@
+{
+    "Endotracheal tube in place": {
+      "pos": [
+        "endotracheal tube in right place.",
+        "endotracheal tube in place.",
+        "Appropriate placement of the tube tip."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    },
+    "Endotracheal tube malposition": {
+      "pos": [
+        "Endotracheal tube malposition.",
+        "Endotracheal tube in wrong place.",
+        "esophageal intubation.",
+        "endotracheal tube tip too deep.",
+        "right main bronchus intubation.",
+        "left main bronchus intubation.",
+        "tube positioned too high."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    },
+    "Pigtail in place": {
+      "pos": [
+        "pigtail in place.",
+        "chest pigtail in place.",
+        "pigtail placement."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    },
+    "Pigtail malpositon": {
+      "pos": [
+        "pigtail malposition.",
+        "pigtail in wrong place.",
+        "chest pigtail displacement.",
+        "chest pigtail kinking.",
+        "pigtail tip in subcutaneous tissue."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    },
+    "Chest tube in place": {
+      "pos": [
+        "Chest tube in place.",
+        "chest tube placement."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    },
+    "Chest tube malposition": {
+      "pos": [
+        "chest tube malposition.",
+        "chest tube in wrong place.",
+        "chest tube displacement.",
+        "chest tube kinking.",
+        "chest tube tip in subcutaneous tissue."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    },
+    "NG tube in place": {
+      "pos": [
+        "NG tube.",
+        "Nasogastric tube.",
+        "NG tube in place."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    },
+    "NG tube malposition": {
+      "pos": [
+        "Ng tube malposition.",
+        "NG tube displacement.",
+        "NG tube kinking in the pharynx.",
+        "NG tip not in the stomach."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    },
+    "Central venous catheter in place": {
+      "pos": [
+        "Central venous catheter.",
+        "CVC.",
+        "CVC in place.",
+        "CVC tip in place.",
+        "proper position of CVC."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    },
+    "Pneumothorax": {
+      "pos": [
+        "pneumothorax.",
+        "there is pneumothorax.",
+        "pneumothorax is present.",
+        "pneumothorax is seen.",
+        "pneumothorax is noted.",
+        "the presence of pneumothorax is seen.",
+        "the presence of pneumothorax is noted.",
+        "Tension pneumothorax."
+      ],
+      "neg": [
+        "no pneumothorax.",
+        "no evidence of pneumothorax.",
+        "no convincing evidence of pneumothorax.",
+        "no definite evidence of pneumothorax.",
+        "no visible pneumothorax.",
+        "no definite pneumothorax.",
+        "no evident pneumothorax.",
+        "no obvious pneumothorax.",
+        "no appreciable pneumothorax.",
+        "no convincing signs of pneumothorax.",
+        "no radiographic evidence for pneumothorax.",
+        "there is no pneumothorax.",
+        "there is no evidence of pneumothorax.",
+        "there is no definite pneumothorax.",
+        "there is no evident pneumothorax.",
+        "there is no obvious pneumothorax.",
+        "there is no appreciable pneumothorax.",
+        "there is no convincing signs of pneumothorax.",
+        "there is no evidence for the presence of pneumothorax.",
+        "there is no convincing evidence for the presence of pneumothorax.",
+        "there is no radiographic evidence for pneumothorax.",
+        "no pneumothorax is visible.",
+        "no pneumothorax is present.",
+        "no pneumothorax is noted."
+      ],
+      "unc": [
+        "Pneumothorax could be present.",
+        "Pneumothorax might be present.",
+        "Pneumothorax may be present.",
+        "Pneumothorax possibly be present.",
+        "may represent Pneumothorax.",
+        "may represent the presence of Pneumothorax.",
+        "may reflect Pneumothorax.",
+        "may reflect the presence of Pneumothorax.",
+        "may indicate Pneumothorax.",
+        "may indicate the presence of Pneumothorax.",
+        "may include Pneumothorax.",
+        "may include the presence of Pneumothorax.",
+        "could represent Pneumothorax.",
+        "could represent the presence of Pneumothorax.",
+        "could reflect Pneumothorax.",
+        "could reflect the presence of Pneumothorax.",
+        "could indicate Pneumothorax.",
+        "could indicate the presence of Pneumothorax.",
+        "could include Pneumothorax.",
+        "could include the presence of Pneumothorax.",
+        "may be consistent with Pneumothorax.",
+        "may be compatible with Pneumothorax.",
+        "maybe secondary to Pneumothorax.",
+        "may be Pneumothorax.",
+        "maybe due to Pneumothorax.",
+        "suspected Pneumothorax.",
+        "could related to Pneumothorax.",
+        "possibly reflecting a Pneumothorax.",
+        "Correlation for symptoms of Pneumothorax.",
+        "cannot rule out Pneumothorax.",
+        "no evidence to rule out Pneumothorax.",
+        "cannot exclude some Pneumothorax.",
+        "question left Pneumothorax.",
+        "might be Pneumothorax.",
+        "would be Pneumothorax.",
+        "could be Pneumothorax.",
+        "possible Pneumothorax.",
+        "possibly Pneumothorax.",
+        "presumably Pneumothorax.",
+        "probable Pneumothorax.",
+        "questionable Pneumothorax.",
+        "suspect Pneumothorax.",
+        "suspected Pneumothorax.",
+        "suspicious Pneumothorax.",
+        "correlate clinically for Pneumothorax.",
+        "correlate clinically for evidence of Pneumothorax.",
+        "Pneumothorax suspected.",
+        "Pneumothorax could appear.",
+        "Pneumothorax is not excluded.",
+        "Pneumothorax may have this appearance.",
+        "Pneumothorax may also have this appearance.",
+        "Pneumothorax might have this appearance.",
+        "Pneumothorax might also have this appearance.",
+        "Pneumothorax could have this appearance.",
+        "Pneumothorax could also have this appearance."
+      ]
+    },
+    "Subcutaneous emphysema": {
+      "pos": [
+        "Subcutaneous emphysema.",
+        "there is subcutaneous emphysema.",
+        "Subcutaneous emphysema is present.",
+        "Subcutaneous emphysema is seen.",
+        "Subcutaneous emphysema is noted."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    },
+    "Pneumomediastinum": {
+      "pos": [
+        "Pneumomediastinum.",
+        "there is pneumomediastinum.",
+        "Pneumomediastinum is present.",
+        "Pneumomediastinum is seen.",
+        "Pneumomediastinum is noted."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    },
+    "Foreign body": {
+      "pos": [
+        "Foreign body.",
+        "guidewire retention.",
+        "CVC guidewire retention."
+      ],
+      "neg": [
+        ""
+      ],
+      "unc": [
+        ""
+      ]
+    }
+  }
+  
