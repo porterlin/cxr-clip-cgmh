@@ -1,0 +1,9 @@
+cgmh:
+  name: "cgmh"
+  data_type: "imagetext"
+  data_path: "/home/richardlin/home/m123140003/remote_disk10TB/datasets/cgmh-cxr/CLIP/cgmh_train.csv"
+  image_size: ${base.image_size}
+  text_max_length: ${base.text_max_length}
+  prompt_from_json: true
+  data_frac: ${base.data_frac}
+  num_negs: 0

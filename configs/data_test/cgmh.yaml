@@ -1,0 +1,4 @@
+cgmh:
+  name: "cgmh"
+  data_type: "imagetext_eval"
+  data_path: "/home/richardlin/home/m123140003/remote_disk10TB/datasets/cgmh-cxr/CLIP/cgmh_test.csv"
