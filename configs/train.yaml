@@ -1,15 +1,11 @@
 defaults:
   - _self_
-  - data_train:
-    - mimic_cxr
-    - chexpert
-  - data_valid:
-    - mimic_cxr
-    - chexpert
+  - data_train: cgmh
+  - data_valid: cgmh
   - dataloader: dataloader_128
   - tokenizer: clinical_bert
   - transform: clahe
-  - model: clip_resnet_clinical
+  - model: clip_swin_clinical
   - optimizer: adamw
   - scheduler: cosine_epoch15_warmup1
   - loss: cxr_clip
