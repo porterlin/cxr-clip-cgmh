@@ -43,7 +43,10 @@ class ImageTextDataset(Dataset):
         self.tokenizer = tokenizer
         self.image_transforms = load_transform(split=split, transform_config=transform_config)
 
-        if prompt_from_json:
+        if self.name == "cgmh" and prompt_from_json:
+            with open("datasets/train_prompts_cgmh.json") as f:
+                self.prompt_json = json.load(f)
+        elif prompt_from_json:
             with open("datasets/train_prompts_all.json") as f:
                 self.prompt_json = json.load(f)
         else:

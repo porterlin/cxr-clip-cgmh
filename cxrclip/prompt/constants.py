@@ -1,3 +1,19 @@
+CGMH_TASKS = [
+    "Endotracheal tube in place",
+    "Endotracheal tube malposition",
+    "Pigtail in place",
+    "Pigtail malpositon",
+    "Chest tube in place",
+    "Chest tube malposition",
+    "NG tube in place",
+    "NG tube malposition",
+    "Central venous catheter in place",
+    "Pneumothorax",
+    "Subcutaneous emphysema",
+    "Pneumomediastinum",
+    "Foreign body",
+]
+
 CHEST14_TASKS = [
     "Atelectasis",
     "Cardiomegaly",

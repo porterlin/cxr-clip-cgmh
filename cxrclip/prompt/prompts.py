@@ -56,6 +56,15 @@ def generate_report_from_labels(labels, prompt_json, deterministic=False, num_ne
 
         if "Effusion" in positive:
             positive = [pos.replace("Effusion", "Pleural Effusion") for pos in positive]
+    
+    elif name == "cgmh":
+        positive = labels
+        if num_negs:
+            negative = random.sample(list(set(constants.CGMH_TASKS) - set(positive)), k=num_negs)
+        else:
+            negative = []
+        uncertain = []
+
 
     # validation loss control
     if deterministic:
