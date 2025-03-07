@@ -42,7 +42,8 @@ class HuggingfaceImageEncoder(nn.Module):
             output = self.image_encoder(pixel_values=image, interpolate_pos_encoding=True)
         elif self.model_type == "swin":
             output = self.image_encoder(pixel_values=image)
-        return output["last_hidden_state"]  # (batch, seq_len, hidden_size)
+        # return output["last_hidden_state"]  # (batch, seq_len, hidden_size)
+        return output
 
 
 class ResNet50(nn.Module):

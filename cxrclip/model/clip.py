@@ -50,8 +50,9 @@ class CXRClip(nn.Module):
             return image_features
         else:
             # get [CLS] token for global representation (only for vision transformer)
-            global_features = image_features[:, 0]
-            return global_features
+            # global_features = image_features[:, 0]
+            # return global_features
+            return image_features["pooler_output"]
 
     def encode_text(self, text_tokens):
         text_features = self.text_encoder(text_tokens)
