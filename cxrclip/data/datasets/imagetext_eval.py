@@ -9,6 +9,7 @@ from torch.utils.data.dataset import Dataset
 from cxrclip.data.data_utils import load_transform, transform_image
 from cxrclip.prompt.constants import CHEXPERT_CLASS_PROMPTS
 
+from cxrclip.prompt.constants import CGMH_TASKS
 
 class ImageTextEvalDataset(Dataset):
     def __init__(
@@ -33,6 +34,8 @@ class ImageTextEvalDataset(Dataset):
 
         if self.name == "chexpert5x200":
             self.label_list = list(CHEXPERT_CLASS_PROMPTS.keys())
+        elif self.name == "cgmh":
+            self.label_list = list(CGMH_TASKS.keys())
         else:
             self.label_list = []
 
@@ -65,7 +68,7 @@ class ImageTextEvalDataset(Dataset):
 
         sample = {"images": image, "text": text}
 
-        if self.name in {"chexpert5x200"}:
+        if self.name in {"chexpert5x200", "cgmh"}:
             for label_candidate in self.label_list:
                 if self.df[label_candidate][index] == 1.0:
                     label = label_candidate

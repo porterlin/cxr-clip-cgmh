@@ -1,12 +1,6 @@
 defaults:
   - _self_
-  - data_test:
-    - vindr_cxr
-    - rsna_pneumonia
-    - siim_pneumothorax
-    - chexpert5x200
-    - mimic_cxr
-    - openi
+  - data_test: cgmh
   - dataloader: dataloader_128
   - transform: default
   - tokenizer: clinical_bert
