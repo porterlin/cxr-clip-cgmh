@@ -55,6 +55,9 @@ configs/data_test/cgmh.yaml
 
 最後會把所有選到的句子合起來當作該病人的報告
 
+### Optional
+如果需要更換 label，```cxrclip/prompt/constants.py``` 中的 CGMH_TASKS 也要做修改
+
 ## Train
 * 單機多 GPU
   ```bash
