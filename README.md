@@ -1,4 +1,86 @@
-# CXR-CLIP
+# CXR-CLIP-CGMH
+## Prepare dataset
+訓練和驗證資料集的 csv 檔要包含以下欄位
+| index | image              | text_label        |
+|-------|--------------------|-------------------|
+| 0     | List of image_path | [positive labels] |
+
+測試資料集的 csv 檔要包含以下欄位
+| index | image              | label_names        | text        |
+|-------|--------------------|-------------------|-------------------|
+| 0     | List of image_path | 0 or 1 for each label_name | text |
+## Setup
+### Dataset
+將以下檔案中的 data_path 替換成自己電腦中長庚資料集的路徑
+```
+configs/data_train/cgmh.yaml
+configs/data_valid/cgmh.yaml
+configs/data_test/cgmh.yaml
+```
+
+### Prompts
+```datasets/train_prompts_cgmh.json``` 定義如何把 label 轉換成句子。範例如下，每個 label 會有 3 個部分分別為 pos, neg, unc (positive, negative, uncertain)。自行填入句子，訓練時會從中隨機挑選。
+```json
+"Pneumothorax": {
+      "pos": [
+        "pneumothorax.",
+        "there is pneumothorax.",
+        "pneumothorax is present.",
+        "pneumothorax is seen.",
+        "pneumothorax is noted.",
+        "the presence of pneumothorax is seen.",
+        "the presence of pneumothorax is noted.",
+        "Tension pneumothorax."
+      ],
+      "neg": [
+        "no pneumothorax.",
+        "no evidence of pneumothorax.",
+        "no convincing evidence of pneumothorax.",
+        "no definite evidence of pneumothorax.",
+        "no visible pneumothorax."
+      ],
+      "unc": [
+        "Pneumothorax could be present.",
+        "Pneumothorax might be present.",
+        "Pneumothorax may be present.",
+        "Pneumothorax possibly be present."
+      ]
+    }
+```
+目前預設是只取pos。比方說如果有個病人同時有 Pneumothorax 和 Pigtail malpositon，訓練時會從 Pneumothorax 和 Pigtail malpositon 的 pos 中，各自隨機選擇一個句子。
+
+如果需要 neg 可以修改 ```configs/data_train/cgmh.yaml```, ```configs/data_valid/cgmh.yaml``` 中的 num_negs 值。
+
+假設 num_negs=3，則根據上述例子會從 Pneumothorax 和 Pigtail malpositon 之外的其他疾病隨機選擇 3 個，然後在該疾病下的 neg 隨機選擇一個。
+
+最後會把所有選到的句子合起來當作該病人的報告
+
+## Train
+* 單機多 GPU
+  ```bash
+  CUDA_VISIBLE_DEVICES=0,1,2,3 NCCL_P2P_LEVEL=NVL torchrun --standalone --nproc_per_node=4 train.py
+  ```
+  * CUDA_VISIBLE_DEVICES: 程式可以看到的 GPU
+  * NCCL_P2P_LEVEL: 定義 GPU 間的通訊機制
+  * --standalone: 單機
+  * --nproc_per_node: process 數量，原則上一顆 GPU 一個 process。所以 CUDA_VISIBLE_DEVICES 有幾顆這裡就設幾個
+* sigle gpu
+  ```bash
+  python train.py
+  ```
+
+## Eval
+* 測試整個資料集
+  ```bash
+  CUDA_VISIBLE_DEVICES=0 python evaluate_clip.py test.checkpoint="/PATH/model-best.tar"
+  ```
+* 單張圖片推理
+  ```bash
+  CUDA_VISIBLE_DEVICES=0 python inference.py --model_path /PATH/model-best.tar --image_path /PATH/image.jpg
+  ```
+
+***
+# CXR-CLIP 原始 README
 This is an official Pytorch Implementation of **"CXR-CLIP: Toward Large Scale Chest X-ray Language-Image Pre-training"** [[arxiv]](https://arxiv.org/abs/2310.13292)
 
 ## Environment setup
