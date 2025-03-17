@@ -96,7 +96,7 @@ class Evaluator:
         if test_dataset_name in {"rsna_pneumonia"}:
             results["zeroshot_binary"] = self.zeroshot_binary_BioVIL(image_embeddings, label_names, class_list)
 
-        if test_dataset_name in {"chexpert5x200", "mimic_cxr", "openi"}:
+        if test_dataset_name in {"chexpert5x200", "mimic_cxr", "openi", "cgmh"}:
             results["retrieval_i2t"] = retrieval_image_text(image_embeddings, text_embeddings, texts)
         return results
 
