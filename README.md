@@ -67,7 +67,7 @@ configs/data_test/cgmh.yaml
   * NCCL_P2P_LEVEL: 定義 GPU 間的通訊機制
   * --standalone: 單機
   * --nproc_per_node: process 數量，原則上一顆 GPU 一個 process。所以 CUDA_VISIBLE_DEVICES 有幾顆這裡就設幾個
-* sigle gpu
+* single gpu
   ```bash
   python train.py
   ```
